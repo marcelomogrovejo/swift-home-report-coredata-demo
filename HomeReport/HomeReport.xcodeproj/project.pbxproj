@@ -38,6 +38,8 @@
 		168AFDAD1ED629DF00A9DCAE /* Home+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDA51ED629DF00A9DCAE /* Home+CoreDataProperties.swift */; };
 		168AFDAE1ED629DF00A9DCAE /* Condo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDA61ED629DF00A9DCAE /* Condo+CoreDataClass.swift */; };
 		168AFDAF1ED629DF00A9DCAE /* Condo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDA71ED629DF00A9DCAE /* Condo+CoreDataProperties.swift */; };
+		168AFDB31EDCB0F200A9DCAE /* HomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */; };
+		168AFDB51EDCB32F00A9DCAE /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */; };
 		169771011ED5DF2800A88FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169771001ED5DF2800A88FDA /* AppDelegate.swift */; };
 		169771031ED5DF2800A88FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169771021ED5DF2800A88FDA /* ViewController.swift */; };
 		169771061ED5DF2800A88FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169771041ED5DF2800A88FDA /* Main.storyboard */; };
@@ -79,6 +81,8 @@
 		168AFDA51ED629DF00A9DCAE /* Home+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Home+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		168AFDA61ED629DF00A9DCAE /* Condo+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataClass.swift"; sourceTree = "<group>"; };
 		168AFDA71ED629DF00A9DCAE /* Condo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListViewController.swift; sourceTree = "<group>"; };
+		168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		169770FD1ED5DF2800A88FDA /* HomeReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169771001ED5DF2800A88FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		169771021ED5DF2800A88FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +158,22 @@
 			name = entity;
 			sourceTree = "<group>";
 		};
+		168AFDB01EDCB02800A9DCAE /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		168AFDB11EDCB03100A9DCAE /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */,
+				168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
 		169770F41ED5DF2800A88FDA = {
 			isa = PBXGroup;
 			children = (
@@ -173,6 +193,8 @@
 		169770FF1ED5DF2800A88FDA /* HomeReport */ = {
 			isa = PBXGroup;
 			children = (
+				168AFDB11EDCB03100A9DCAE /* controller */,
+				168AFDB01EDCB02800A9DCAE /* view */,
 				168AFD9F1ED629AE00A9DCAE /* entity */,
 				168AFD701ED6257E00A9DCAE /* model */,
 				168AFD6F1ED6257600A9DCAE /* images */,
@@ -284,9 +306,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				168AFDAA1ED629DF00A9DCAE /* SingleFamily+CoreDataClass.swift in Sources */,
+				168AFDB31EDCB0F200A9DCAE /* HomeListViewController.swift in Sources */,
 				169771091ED5DF2800A88FDA /* HomeReport.xcdatamodeld in Sources */,
 				168AFDAD1ED629DF00A9DCAE /* Home+CoreDataProperties.swift in Sources */,
 				169771031ED5DF2800A88FDA /* ViewController.swift in Sources */,
+				168AFDB51EDCB32F00A9DCAE /* SummaryViewController.swift in Sources */,
 				169771011ED5DF2800A88FDA /* AppDelegate.swift in Sources */,
 				168AFDA81ED629DF00A9DCAE /* SaleHistory+CoreDataClass.swift in Sources */,
 				169771161ED5DF5A00A88FDA /* CoreDataStack.swift in Sources */,
