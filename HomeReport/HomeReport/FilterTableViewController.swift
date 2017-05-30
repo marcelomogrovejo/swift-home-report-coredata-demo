@@ -8,16 +8,33 @@
 
 import UIKit
 
+// Create a protocol for updating the previous view controller (home list)
+protocol FilterTableViewControllerDelegate {
+    func updateHomeList(filterBy: NSPredicate?, sortBy: NSSortDescriptor?)
+}
+
 class FilterTableViewController: UITableViewController {
 
+    // MARK: Outlets
+    
+    @IBOutlet weak var sortByLocationCell: UITableViewCell!
+    @IBOutlet weak var sortByPriceLowHighCell: UITableViewCell!
+    @IBOutlet weak var sortByPriceHighLowCell: UITableViewCell!
+    
+    // MARK: Filters
+    
+    @IBOutlet weak var filterByCondoCell: UITableViewCell!
+    @IBOutlet weak var filterBySingleFamilyCell: UITableViewCell!
+    
+    // MARK: Properties
+    
+    var sortDescriptor: NSSortDescriptor?
+    var searchPredicate: NSPredicate?
+    var delegate: FilterTableViewControllerDelegate!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,13 +45,43 @@ class FilterTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return section == 0 ? 3 : 2
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedCell = tableView.cellForRow(at: indexPath)!
+        
+        switch selectedCell {
+        case sortByLocationCell:
+            setSortDescriptor(sortBy: "city", isAscending: true)
+        case sortByPriceLowHighCell:
+            setSortDescriptor(sortBy: "price", isAscending: true)
+        case sortByPriceHighLowCell:
+            setSortDescriptor(sortBy: "price", isAscending: false)
+        case filterByCondoCell, filterBySingleFamilyCell:
+            setFilterSearchPredicate(filterBy: selectedCell.textLabel!.text!)
+        default:
+            print("No cell is selected")
+        }
+        
+        selectedCell.accessoryType = .checkmark
+        
+        // Call the tableView with the data to update
+        delegate.updateHomeList(filterBy: searchPredicate, sortBy: sortDescriptor)
+    }
+    
+    // MARK: Private methods
+    
+    private func setSortDescriptor(sortBy: String, isAscending: Bool) {
+        sortDescriptor = NSSortDescriptor(key: sortBy, ascending: isAscending)
+    }
+    
+    private func setFilterSearchPredicate(filterBy: String) {
+        searchPredicate = NSPredicate(format: "homeType = %@", filterBy)
     }
 
     /*

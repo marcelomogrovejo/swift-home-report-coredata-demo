@@ -28,11 +28,21 @@ class HomeListViewController: UIViewController, UITableViewDataSource, UITableVi
     var home: Home? = nil
     var isForSale: Bool = true
     var selectedHome: Home?
+    var sortDescriptor = [NSSortDescriptor]()
+    var searchPredicate: NSPredicate?
+    var request: NSFetchRequest<Home>?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        request = Home.fetchRequest()
+        
         loadData()
     }
 
@@ -71,7 +81,22 @@ class HomeListViewController: UIViewController, UITableViewDataSource, UITableVi
     // MARK: Private methods
     
     private func loadData() {
-        homes = home!.getHomesByStatus(isForSale: isForSale, moc: managedObjectContext)
+        var predicates = [NSPredicate]()
+        
+        let statusPredicate = NSPredicate(format: "isForSale = %@", isForSale as CVarArg)
+        predicates.append(statusPredicate)
+        
+        if let additionalPredicate = searchPredicate {
+            predicates.append(additionalPredicate)
+        }
+        let predicate = NSCompoundPredicate(type: .and, subpredicates: predicates)
+        request?.predicate = predicate
+        
+        if sortDescriptor.count > 0 {
+            request?.sortDescriptors = sortDescriptor
+        }
+        
+        homes = home!.getHomesByStatus(request: request!, moc: managedObjectContext)
         tableView.reloadData()
     }
     
@@ -85,7 +110,29 @@ class HomeListViewController: UIViewController, UITableViewDataSource, UITableVi
             let destinationController = segue.destination as! SaleHistoryViewController
             destinationController.home = selectedHome
             destinationController.managedObjectContext = managedObjectContext
+        } else if segue.identifier == "segueToFilter" {
+            // Reset the filters at the first time
+            sortDescriptor = []
+            searchPredicate = nil
+            
+            let controller = segue.destination as! FilterTableViewController
+            // HomeListViewController will be the delegate for FilterTableViewController
+            controller.delegate = self
         }
     }
     
+}
+
+// Implement the protocol defined on FilterTableViewController
+
+extension HomeListViewController: FilterTableViewControllerDelegate {
+    
+    func updateHomeList(filterBy: NSPredicate?, sortBy: NSSortDescriptor?) {
+        if let filter = filterBy {
+            searchPredicate = filter
+        }
+        if let sort = sortBy {
+            sortDescriptor.append(sort)
+        }
+    }
 }
