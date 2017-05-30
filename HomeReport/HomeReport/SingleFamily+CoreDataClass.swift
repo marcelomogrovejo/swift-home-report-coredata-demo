@@ -11,5 +11,5 @@ import CoreData
 
 @objc(SingleFamily)
 public class SingleFamily: Home {
-
+    
 }

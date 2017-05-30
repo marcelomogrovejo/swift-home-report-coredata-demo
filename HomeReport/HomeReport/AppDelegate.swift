@@ -17,10 +17,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        
         deleteRecords()
         checkDataStore()
         
+        // Get managedObjectContext
+        let managedObjectContext = coreData.persistentContainer.viewContext
+        
+        // Get reference to HomeListViewController
+        let tabBarController = self.window?.rootViewController as! UITabBarController
+        
+        // First tab - Home List
+        let homeListNavigationController = tabBarController.viewControllers?[0] as! UINavigationController
+        let homeListViewController = homeListNavigationController.topViewController as! HomeListViewController
+        
+        // Assigne the managedObjectContext
+        homeListViewController.managedObjectContext = managedObjectContext
         
         return true
     }

@@ -40,8 +40,13 @@
 		168AFDAF1ED629DF00A9DCAE /* Condo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDA71ED629DF00A9DCAE /* Condo+CoreDataProperties.swift */; };
 		168AFDB31EDCB0F200A9DCAE /* HomeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */; };
 		168AFDB51EDCB32F00A9DCAE /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */; };
+		168AFDB71EDDBA9400A9DCAE /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB61EDDBA9400A9DCAE /* FilterTableViewController.swift */; };
+		168AFDB91EDDBADE00A9DCAE /* HomeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDB81EDDBADE00A9DCAE /* HomeListTableViewCell.swift */; };
+		168AFDBC1EDDC20F00A9DCAE /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDBB1EDDC20F00A9DCAE /* Double+Extension.swift */; };
+		168AFDBE1EDDC83C00A9DCAE /* SaleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDBD1EDDC83C00A9DCAE /* SaleHistoryViewController.swift */; };
+		168AFDC01EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDBF1EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift */; };
+		168AFDC21EDDCBC300A9DCAE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */; };
 		169771011ED5DF2800A88FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169771001ED5DF2800A88FDA /* AppDelegate.swift */; };
-		169771031ED5DF2800A88FDA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169771021ED5DF2800A88FDA /* ViewController.swift */; };
 		169771061ED5DF2800A88FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169771041ED5DF2800A88FDA /* Main.storyboard */; };
 		169771091ED5DF2800A88FDA /* HomeReport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169771071ED5DF2800A88FDA /* HomeReport.xcdatamodeld */; };
 		1697710B1ED5DF2800A88FDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1697710A1ED5DF2800A88FDA /* Assets.xcassets */; };
@@ -83,9 +88,14 @@
 		168AFDA71ED629DF00A9DCAE /* Condo+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Condo+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListViewController.swift; sourceTree = "<group>"; };
 		168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
+		168AFDB61EDDBA9400A9DCAE /* FilterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		168AFDB81EDDBADE00A9DCAE /* HomeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeListTableViewCell.swift; sourceTree = "<group>"; };
+		168AFDBB1EDDC20F00A9DCAE /* Double+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		168AFDBD1EDDC83C00A9DCAE /* SaleHistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHistoryViewController.swift; sourceTree = "<group>"; };
+		168AFDBF1EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		169770FD1ED5DF2800A88FDA /* HomeReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169771001ED5DF2800A88FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		169771021ED5DF2800A88FDA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		169771051ED5DF2800A88FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		169771081ED5DF2800A88FDA /* HomeReport.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HomeReport.xcdatamodel; sourceTree = "<group>"; };
 		1697710A1ED5DF2800A88FDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -161,6 +171,8 @@
 		168AFDB01EDCB02800A9DCAE /* view */ = {
 			isa = PBXGroup;
 			children = (
+				168AFDB81EDDBADE00A9DCAE /* HomeListTableViewCell.swift */,
+				168AFDBF1EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -170,8 +182,19 @@
 			children = (
 				168AFDB21EDCB0F200A9DCAE /* HomeListViewController.swift */,
 				168AFDB41EDCB32F00A9DCAE /* SummaryViewController.swift */,
+				168AFDB61EDDBA9400A9DCAE /* FilterTableViewController.swift */,
+				168AFDBD1EDDC83C00A9DCAE /* SaleHistoryViewController.swift */,
 			);
 			name = controller;
+			sourceTree = "<group>";
+		};
+		168AFDBA1EDDC1E200A9DCAE /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				168AFDBB1EDDC20F00A9DCAE /* Double+Extension.swift */,
+				168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */,
+			);
+			name = helper;
 			sourceTree = "<group>";
 		};
 		169770F41ED5DF2800A88FDA = {
@@ -193,6 +216,7 @@
 		169770FF1ED5DF2800A88FDA /* HomeReport */ = {
 			isa = PBXGroup;
 			children = (
+				168AFDBA1EDDC1E200A9DCAE /* helper */,
 				168AFDB11EDCB03100A9DCAE /* controller */,
 				168AFDB01EDCB02800A9DCAE /* view */,
 				168AFD9F1ED629AE00A9DCAE /* entity */,
@@ -200,7 +224,6 @@
 				168AFD6F1ED6257600A9DCAE /* images */,
 				169771151ED5DF5A00A88FDA /* CoreDataStack.swift */,
 				169771001ED5DF2800A88FDA /* AppDelegate.swift */,
-				169771021ED5DF2800A88FDA /* ViewController.swift */,
 				169771041ED5DF2800A88FDA /* Main.storyboard */,
 				1697710A1ED5DF2800A88FDA /* Assets.xcassets */,
 				1697710C1ED5DF2800A88FDA /* LaunchScreen.storyboard */,
@@ -307,9 +330,10 @@
 			files = (
 				168AFDAA1ED629DF00A9DCAE /* SingleFamily+CoreDataClass.swift in Sources */,
 				168AFDB31EDCB0F200A9DCAE /* HomeListViewController.swift in Sources */,
+				168AFDBE1EDDC83C00A9DCAE /* SaleHistoryViewController.swift in Sources */,
 				169771091ED5DF2800A88FDA /* HomeReport.xcdatamodeld in Sources */,
 				168AFDAD1ED629DF00A9DCAE /* Home+CoreDataProperties.swift in Sources */,
-				169771031ED5DF2800A88FDA /* ViewController.swift in Sources */,
+				168AFDBC1EDDC20F00A9DCAE /* Double+Extension.swift in Sources */,
 				168AFDB51EDCB32F00A9DCAE /* SummaryViewController.swift in Sources */,
 				169771011ED5DF2800A88FDA /* AppDelegate.swift in Sources */,
 				168AFDA81ED629DF00A9DCAE /* SaleHistory+CoreDataClass.swift in Sources */,
@@ -317,8 +341,12 @@
 				168AFDA91ED629DF00A9DCAE /* SaleHistory+CoreDataProperties.swift in Sources */,
 				168AFDAE1ED629DF00A9DCAE /* Condo+CoreDataClass.swift in Sources */,
 				168AFDAC1ED629DF00A9DCAE /* Home+CoreDataClass.swift in Sources */,
+				168AFDB71EDDBA9400A9DCAE /* FilterTableViewController.swift in Sources */,
 				168AFDAB1ED629DF00A9DCAE /* SingleFamily+CoreDataProperties.swift in Sources */,
+				168AFDB91EDDBADE00A9DCAE /* HomeListTableViewCell.swift in Sources */,
 				168AFDAF1ED629DF00A9DCAE /* Condo+CoreDataProperties.swift in Sources */,
+				168AFDC21EDDCBC300A9DCAE /* Date+Extension.swift in Sources */,
+				168AFDC01EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
