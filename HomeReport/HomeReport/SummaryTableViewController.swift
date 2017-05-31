@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class SummaryTableViewController: UITableViewController {
 
@@ -21,15 +22,25 @@ class SummaryTableViewController: UITableViewController {
     @IBOutlet weak var avgPriceSFLabel: UILabel!
     
     
+    // MARK: Properties
+    var home: Home? = nil
+    weak var managedObjectContext: NSManagedObjectContext! {
+        didSet {
+            return home = Home(context: managedObjectContext)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        totalSalesDollarLabel.text = home?.getTotalHomeSales(moc: managedObjectContext)
+        numCondoSoldLabel.text = home?.getNumberCondoSold(moc: managedObjectContext)
+        numSFSoldLabel.text = home?.getNumberSigleFamilyHomeSold(moc: managedObjectContext)
+        minPriceHomeLabel.text = home?.getHomePriceSold(priceType: "min", moc: managedObjectContext)
+        maxPriceHomeLabel.text = home?.getHomePriceSold(priceType: "max", moc: managedObjectContext)
+        avgPriceCondoLabel.text = home?.getAverageHomePrice(homeType: HomeType.Condo.rawValue, moc: managedObjectContext)
+        avgPriceSFLabel.text = home?.getAverageHomePrice(homeType: HomeType.SingleFamily.rawValue, moc: managedObjectContext)
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,13 +51,22 @@ class SummaryTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        var rowCount = 0
+        
+        switch section {
+        case 0:
+            rowCount = 3
+        case 1, 2:
+            rowCount = 2
+        default:
+            rowCount = 0
+        }
+        
+        return rowCount
     }
 
     /*

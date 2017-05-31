@@ -46,6 +46,7 @@
 		168AFDC01EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDBF1EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift */; };
 		168AFDC21EDDCBC300A9DCAE /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */; };
 		168AFDC41EDE11BD00A9DCAE /* SummaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDC31EDE11BD00A9DCAE /* SummaryTableViewController.swift */; };
+		168AFDC61EDF009600A9DCAE /* HomeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 168AFDC51EDF009600A9DCAE /* HomeType.swift */; };
 		169771011ED5DF2800A88FDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 169771001ED5DF2800A88FDA /* AppDelegate.swift */; };
 		169771061ED5DF2800A88FDA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 169771041ED5DF2800A88FDA /* Main.storyboard */; };
 		169771091ED5DF2800A88FDA /* HomeReport.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 169771071ED5DF2800A88FDA /* HomeReport.xcdatamodeld */; };
@@ -94,6 +95,7 @@
 		168AFDBF1EDDC85600A9DCAE /* SaleHistoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaleHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		168AFDC31EDE11BD00A9DCAE /* SummaryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummaryTableViewController.swift; sourceTree = "<group>"; };
+		168AFDC51EDF009600A9DCAE /* HomeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeType.swift; sourceTree = "<group>"; };
 		169770FD1ED5DF2800A88FDA /* HomeReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		169771001ED5DF2800A88FDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		169771051ED5DF2800A88FDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			children = (
 				168AFDBB1EDDC20F00A9DCAE /* Double+Extension.swift */,
 				168AFDC11EDDCBC300A9DCAE /* Date+Extension.swift */,
+				168AFDC51EDF009600A9DCAE /* HomeType.swift */,
 			);
 			name = helper;
 			sourceTree = "<group>";
@@ -340,6 +343,7 @@
 				168AFDA91ED629DF00A9DCAE /* SaleHistory+CoreDataProperties.swift in Sources */,
 				168AFDAE1ED629DF00A9DCAE /* Condo+CoreDataClass.swift in Sources */,
 				168AFDAC1ED629DF00A9DCAE /* Home+CoreDataClass.swift in Sources */,
+				168AFDC61EDF009600A9DCAE /* HomeType.swift in Sources */,
 				168AFDB71EDDBA9400A9DCAE /* FilterTableViewController.swift in Sources */,
 				168AFDAB1ED629DF00A9DCAE /* SingleFamily+CoreDataProperties.swift in Sources */,
 				168AFDB91EDDBADE00A9DCAE /* HomeListTableViewCell.swift in Sources */,
